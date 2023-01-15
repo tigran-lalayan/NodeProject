@@ -7,6 +7,7 @@ const app = express();
 const bodyparser = require('body-parser');
 const cors = require('cors')
 const UserRoute = require('./userRoute');
+const ProjectRoute = require('./projectRoute');
 
 
 connectDB();
@@ -19,6 +20,7 @@ app.use(bodyparser.json());
 
 app.use('/users', UserRoute);
 
+app.use('/projects', ProjectRoute);
 
 
 app.listen(3000, () => {
